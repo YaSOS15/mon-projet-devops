@@ -1,0 +1,35 @@
+name: CI Pipeline
+
+# Déclencheurs : quand ce workflow doit-il se lancer ?
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Récupérer le code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Installer Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # 3. Installer les dépendances (les outils du projet)
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Lancer les tests (définis dans package.json)
+      - name: Run tests
+        run: npm test
