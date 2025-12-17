@@ -1,0 +1,21 @@
+name: CD Pipeline (Deploy & Notify)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Déclencher le déploiement chez Render
+      - name: Trigger Render Deployment
+        run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+
+      # 2. Notification (Bonus demandé par l'énoncé)
+      # Ici, on fait simple : on affiche juste un message de succès dans les logs.
+      # (Si tu veux une notif Discord, dis-le moi, on l'ajoutera !)
+      - name: Notify Success
+        run: echo "🚀 Déploiement demandé avec succès !"
