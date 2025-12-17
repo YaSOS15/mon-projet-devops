@@ -9,13 +9,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. Déclencher le déploiement chez Render
+      # 1. Déclencher Render
       - name: Trigger Render Deployment
         run: |
           curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
 
-      # 2. Notification (Bonus demandé par l'énoncé)
-      # Ici, on fait simple : on affiche juste un message de succès dans les logs.
-      # (Si tu veux une notif Discord, dis-le moi, on l'ajoutera !)
-      - name: Notify Success
-        run: echo "🚀 Déploiement demandé avec succès !"
+      # 2. Notification Discord Stylée
+      - name: Notify Discord
+        uses: discord-actions/message@v2
+        with:
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          message: "🚀 **DÉPLOIEMENT RÉUSSI !** \n\nLe site a été mis à jour sur Render. \n🔗 Voir le site : https://mon-projet-devops.onrender.com"
+          color: 0x00FF00
