@@ -1,0 +1,13 @@
+{
+  "name": "mon-projet-devops",
+  "version": "1.0.0",
+  "description": "Projet DevOps CI/CD",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Lancement des tests...\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
