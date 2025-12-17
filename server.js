@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Bonjour ! Mon application DevOps fonctionne !');
+  res.send('Bonjour ! Mon application DevOps fonctionne ! Version 2 en ligne !');
 });
 
 app.listen(port, () => {
