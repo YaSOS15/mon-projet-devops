@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+:root {
+    --bg-dark: #121212;
+    --card-bg: #1e1e1e;
+    --accent: #ff4757; /* Rouge "Sale" */
+    --text: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.logo { font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; text-decoration: none; color: white; }
+.logo span { color: var(--accent); }
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.nav-links a:hover { color: var(--accent); }
+
+/* Hero Section (Accueil) */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1552346154-21d32810aba3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 { font-size: 4rem; text-transform: uppercase; margin-bottom: 10px; line-height: 1; }
+.hero p { font-size: 1.5rem; margin-bottom: 30px; color: #ccc; }
+
+.btn {
+    padding: 15px 40px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+.btn:hover { transform: scale(1.05); background: #ff6b81; }
+
+/* Grille Produits (Shop) */
+.container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+.section-title { text-align: center; margin-bottom: 40px; font-size: 2.5rem; text-transform: uppercase; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.product-card:hover { transform: translateY(-10px); }
+
+.product-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-info { padding: 20px; text-align: center; }
+.price { font-size: 1.5rem; color: var(--accent); font-weight: bold; display: block; margin: 10px 0; }

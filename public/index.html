@@ -3,25 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet DevOps</title>
-    <style>
-        body { background-color: #0d1117; color: #c9d1d9; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .container { text-align: center; background: #161b22; padding: 40px; border-radius: 15px; border: 1px solid #30363d; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
-        h1 { color: #58a6ff; margin-bottom: 10px; }
-        .badge { display: inline-block; padding: 5px 10px; margin: 5px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; background: #238636; color: white; }
-        .status { margin-top: 20px; padding: 10px; border: 1px solid #238636; color: #3fb950; border-radius: 5px; }
-    </style>
+    <title>NEO KICKS - Streetwear</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🚀 Projet DevOps</h1>
-        <p>Pipeline CI/CD entièrement automatisé.</p>
-        <div>
-            <span class="badge">Docker</span>
-            <span class="badge">GitHub Actions</span>
-            <span class="badge">Render</span>
+    <nav>
+        <a href="/" class="logo">NEO<span>KICKS</span></a>
+        <div class="nav-links">
+            <a href="/">Accueil</a>
+            <a href="/shop">Collection</a>
+            <a href="/cart">Panier (0)</a>
         </div>
-        <div class="status">✅ SERVICE OPÉRATIONNEL - Version Finale</div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Le Futur<br>à vos pieds</h1>
+            <p>Nouvelle collection Summer 2025 disponible.</p>
+            <a href="/shop" class="btn">Voir la boutique</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Populaires</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="product-img">
+                <div class="product-info">
+                    <h3>Nike Air Red</h3>
+                    <span class="price">129.99 €</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="product-img">
+                <div class="product-info">
+                    <h3>Jordan Green</h3>
+                    <span class="price">189.99 €</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="product-img">
+                <div class="product-info">
+                    <h3>Vans Classic</h3>
+                    <span class="price">89.99 €</span>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
